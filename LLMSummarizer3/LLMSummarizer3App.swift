@@ -6,12 +6,38 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct LLMSummarizer3App: App {
+    @StateObject private var settings = SettingsStore.shared
+    @StateObject private var env = AppEnvironment.shared
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootTabView()
+                .environmentObject(settings)
+                .environmentObject(env)
+        }
+        .modelContainer(for: SummaryItem.self)
+    }
+}
+
+struct RootTabView: View {
+    var body: some View {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            HistoryView()
+                .tabItem {
+                    Label("History", systemImage: "clock")
+                }
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
     }
 }

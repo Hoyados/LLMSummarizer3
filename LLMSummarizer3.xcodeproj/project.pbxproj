@@ -6,14 +6,35 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E1F2D3C42E6D800000000001 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = E1F2D3C52E6D800000000002 /* SwiftSoup */; };
+		E1F2D3D12E6D80000000000E /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = E1F2D3C52E6D800000000002 /* SwiftSoup */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1F2D3D22E6D800000000010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D8062A32E6D7432002B8CE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D8062AA2E6D7432002B8CE8;
+			remoteInfo = LLMSummarizer3;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1D8062AB2E6D7432002B8CE8 /* LLMSummarizer3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLMSummarizer3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F2D3C92E6D800000000006 /* URLSummaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URLSummaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1D8062AD2E6D7432002B8CE8 /* LLMSummarizer3 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = LLMSummarizer3;
+			sourceTree = "<group>";
+		};
+		E1F2D3C82E6D800000000005 /* URLSummaryTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = URLSummaryTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +44,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F2D3C42E6D800000000001 /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F2D3C42E6D800000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1F2D3D12E6D80000000000E /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +64,7 @@
 			children = (
 				1D8062AD2E6D7432002B8CE8 /* LLMSummarizer3 */,
 				1D8062AC2E6D7432002B8CE8 /* Products */,
+				1DB4CA3B2E6D827C0021FC03 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,8 +72,17 @@
 			isa = PBXGroup;
 			children = (
 				1D8062AB2E6D7432002B8CE8 /* LLMSummarizer3.app */,
+				E1F2D3C92E6D800000000006 /* URLSummaryTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1DB4CA3B2E6D827C0021FC03 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				E1F2D3C82E6D800000000005 /* URLSummaryTests */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,10 +105,34 @@
 			);
 			name = LLMSummarizer3;
 			packageProductDependencies = (
+				E1F2D3C52E6D800000000002 /* SwiftSoup */,
 			);
 			productName = LLMSummarizer3;
 			productReference = 1D8062AB2E6D7432002B8CE8 /* LLMSummarizer3.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E1F2D3C72E6D800000000004 /* URLSummaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1F2D3D02E6D80000000000D /* Build configuration list for PBXNativeTarget "URLSummaryTests" */;
+			buildPhases = (
+				E1F2D3C62E6D800000000003 /* Sources */,
+				E1F2D3C42E6D800000000003 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1F2D3D32E6D800000000011 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E1F2D3C82E6D800000000005 /* URLSummaryTests */,
+			);
+			name = URLSummaryTests;
+			packageProductDependencies = (
+				E1F2D3C52E6D800000000002 /* SwiftSoup */,
+			);
+			productName = URLSummaryTests;
+			productReference = E1F2D3C92E6D800000000006 /* URLSummaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,12 +158,16 @@
 			);
 			mainGroup = 1D8062A22E6D7432002B8CE8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E1F2D3C32E6D800000000000 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1D8062AC2E6D7432002B8CE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1D8062AA2E6D7432002B8CE8 /* LLMSummarizer3 */,
+				E1F2D3C72E6D800000000004 /* URLSummaryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -122,7 +190,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1F2D3C62E6D800000000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1F2D3D32E6D800000000011 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D8062AA2E6D7432002B8CE8 /* LLMSummarizer3 */;
+			targetProxy = E1F2D3D22E6D800000000010 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D8062B42E6D7434002B8CE8 /* Debug */ = {
@@ -177,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -234,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -251,6 +334,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 636PFGZF7N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -266,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Hoyados.LLMSummarizer3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.10;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -278,6 +363,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 636PFGZF7N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -293,8 +380,56 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Hoyados.LLMSummarizer3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.10;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E1F2D3CE2E6D80000000000B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = URLSummaryTests;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Hoyados.URLSummaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.10;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLMSummarizer3.app/LLMSummarizer3";
+			};
+			name = Debug;
+		};
+		E1F2D3CF2E6D80000000000C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = URLSummaryTests;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Hoyados.URLSummaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.10;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLMSummarizer3.app/LLMSummarizer3";
 			};
 			name = Release;
 		};
@@ -319,7 +454,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E1F2D3D02E6D80000000000D /* Build configuration list for PBXNativeTarget "URLSummaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1F2D3CE2E6D80000000000B /* Debug */,
+				E1F2D3CF2E6D80000000000C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1F2D3C32E6D800000000000 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1F2D3C52E6D800000000002 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1F2D3C32E6D800000000000 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D8062A32E6D7432002B8CE8 /* Project object */;
 }

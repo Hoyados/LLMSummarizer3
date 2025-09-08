@@ -1,0 +1,130 @@
+{
+  "" : {
+    "const-values" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMSummarizer3-master.swiftconstvalues",
+    "dependencies" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMSummarizer3-master.d",
+    "diagnostics" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMSummarizer3-master.dia",
+    "emit-module-dependencies" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMSummarizer3-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMSummarizer3-master-emit-module.dia",
+    "swift-dependencies" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMSummarizer3-master.swiftdeps"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/App/AppEnvironment.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/AppEnvironment.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/AppEnvironment.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/AppEnvironment.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/ContentView.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Data/Network/URLFetcher.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/URLFetcher.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/URLFetcher.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/URLFetcher.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Data/Parsers/ContentParser.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/ContentParser.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/ContentParser.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/ContentParser.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Data/Parsers/SwiftSoupContentParser.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SwiftSoupContentParser.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SwiftSoupContentParser.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SwiftSoupContentParser.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Data/Providers/GeminiProvider.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/GeminiProvider.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/GeminiProvider.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/GeminiProvider.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Data/Providers/LLMProvider.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMProvider.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMProvider.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMProvider.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Data/Repositories/SummaryRepository.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SummaryRepository.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SummaryRepository.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SummaryRepository.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Domain/Entities/SummaryItem.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SummaryItem.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SummaryItem.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SummaryItem.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Domain/Prompts/PromptTemplate.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/PromptTemplate.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/PromptTemplate.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/PromptTemplate.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Domain/UseCases/DefaultSummarizeArticleUseCase.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/DefaultSummarizeArticleUseCase.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/DefaultSummarizeArticleUseCase.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/DefaultSummarizeArticleUseCase.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Domain/UseCases/SummarizeArticleUseCase.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SummarizeArticleUseCase.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SummarizeArticleUseCase.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SummarizeArticleUseCase.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Features/History/HistoryView.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/HistoryView.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/HistoryView.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/HistoryView.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Features/Home/HomeView.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/HomeView.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/HomeView.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/HomeView.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Features/Home/HomeViewModel.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/HomeViewModel.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/HomeViewModel.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/HomeViewModel.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Features/Settings/SettingsView.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SettingsView.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/LLMSummarizer3App.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMSummarizer3App.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMSummarizer3App.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/LLMSummarizer3App.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Support/AppGroup/AppGroup.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/AppGroup.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/AppGroup.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/AppGroup.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Support/Error/AppError.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/AppError.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/AppError.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/AppError.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Support/Keychain/KeychainService.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/KeychainService.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/KeychainService.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/KeychainService.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Support/Settings/SettingsStore.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SettingsStore.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SettingsStore.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/SettingsStore.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Support/ShareQueue/ShareQueue.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/ShareQueue.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/ShareQueue.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/ShareQueue.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/LLMSummarizer3/Support/Telemetry/Telemetry.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/Telemetry.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/Telemetry.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/Telemetry.o"
+  },
+  "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/hirokiohshida/Documents/SwiftProject/LLMSummarizer3/build/LLMSummarizer3.build/Release-iphoneos/LLMSummarizer3.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

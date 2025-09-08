@@ -1,0 +1,15 @@
+{
+  "" : {
+    "const-values" : "/Users/hirokiohshida/Library/Developer/Xcode/DerivedData/LLMSummarizer3-dthyjmncqyehgqegehpijxpdphsd/SourcePackages/checkouts/LRUCache/build/LRUCache.build/Release-iphoneos/LRUCache.build/Objects-normal/arm64/LRUCache-master.swiftconstvalues",
+    "dependencies" : "/Users/hirokiohshida/Library/Developer/Xcode/DerivedData/LLMSummarizer3-dthyjmncqyehgqegehpijxpdphsd/SourcePackages/checkouts/LRUCache/build/LRUCache.build/Release-iphoneos/LRUCache.build/Objects-normal/arm64/LRUCache-master.d",
+    "diagnostics" : "/Users/hirokiohshida/Library/Developer/Xcode/DerivedData/LLMSummarizer3-dthyjmncqyehgqegehpijxpdphsd/SourcePackages/checkouts/LRUCache/build/LRUCache.build/Release-iphoneos/LRUCache.build/Objects-normal/arm64/LRUCache-master.dia",
+    "emit-module-dependencies" : "/Users/hirokiohshida/Library/Developer/Xcode/DerivedData/LLMSummarizer3-dthyjmncqyehgqegehpijxpdphsd/SourcePackages/checkouts/LRUCache/build/LRUCache.build/Release-iphoneos/LRUCache.build/Objects-normal/arm64/LRUCache-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/hirokiohshida/Library/Developer/Xcode/DerivedData/LLMSummarizer3-dthyjmncqyehgqegehpijxpdphsd/SourcePackages/checkouts/LRUCache/build/LRUCache.build/Release-iphoneos/LRUCache.build/Objects-normal/arm64/LRUCache-master-emit-module.dia",
+    "swift-dependencies" : "/Users/hirokiohshida/Library/Developer/Xcode/DerivedData/LLMSummarizer3-dthyjmncqyehgqegehpijxpdphsd/SourcePackages/checkouts/LRUCache/build/LRUCache.build/Release-iphoneos/LRUCache.build/Objects-normal/arm64/LRUCache-master.swiftdeps"
+  },
+  "/Users/hirokiohshida/Library/Developer/Xcode/DerivedData/LLMSummarizer3-dthyjmncqyehgqegehpijxpdphsd/SourcePackages/checkouts/LRUCache/Sources/LRUCache.swift" : {
+    "index-unit-output-path" : "/LRUCache.build/Release-iphoneos/LRUCache.build/Objects-normal/arm64/LRUCache.o",
+    "llvm-bc" : "/Users/hirokiohshida/Library/Developer/Xcode/DerivedData/LLMSummarizer3-dthyjmncqyehgqegehpijxpdphsd/SourcePackages/checkouts/LRUCache/build/LRUCache.build/Release-iphoneos/LRUCache.build/Objects-normal/arm64/LRUCache.bc",
+    "object" : "/Users/hirokiohshida/Library/Developer/Xcode/DerivedData/LLMSummarizer3-dthyjmncqyehgqegehpijxpdphsd/SourcePackages/checkouts/LRUCache/build/LRUCache.build/Release-iphoneos/LRUCache.build/Objects-normal/arm64/LRUCache.o"
+  }
+}
