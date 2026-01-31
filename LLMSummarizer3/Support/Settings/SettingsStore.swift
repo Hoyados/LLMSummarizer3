@@ -57,6 +57,14 @@ final class SettingsStore: ObservableObject {
     func resetPromptToDefault() {
         customPrompt = PromptTemplate.default.userBase
     }
+
+    func promptTemplate() -> PromptTemplate {
+        let trimmed = customPrompt.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmed.isEmpty {
+            return .default
+        }
+        return PromptTemplate(system: PromptTemplate.default.system, userBase: trimmed)
+    }
 }
 
 enum Keys {

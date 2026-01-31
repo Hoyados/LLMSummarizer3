@@ -26,9 +26,7 @@ final class HomeViewModel: ObservableObject {
 
             self.state = .fetching
             // Fetch inside use case, we only mirror progress locally for UI
-            let template: PromptTemplate = settings.customPrompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-                ? .default
-                : PromptTemplate(system: PromptTemplate.default.system, userBase: settings.customPrompt)
+            let template = settings.promptTemplate()
             let articleFetcher = Task {
                 try await useCase.execute(url: url, template: template)
             }
