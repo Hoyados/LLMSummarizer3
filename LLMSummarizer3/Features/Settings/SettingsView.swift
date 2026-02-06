@@ -25,6 +25,18 @@ struct SettingsView: View {
                     .accessibilityIdentifier("aid.settings.model")
                 }
 
+                Section("Summary Format") {
+                    Picker("Format", selection: $settings.promptPreset) {
+                        ForEach(PromptPreset.allCases) { preset in
+                            Text(preset.displayName).tag(preset)
+                        }
+                    }
+                    .accessibilityIdentifier("aid.settings.promptFormat")
+                    Text("カスタムプロンプトが空の場合、この形式が使用されます。")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
                 Section("") {
                     Text("Gemini API Key")
                     SecureField("AIza...", text: $apiKeyInput)

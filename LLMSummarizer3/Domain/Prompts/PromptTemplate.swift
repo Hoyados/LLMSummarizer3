@@ -24,5 +24,17 @@ extension PromptTemplate {
         4) 信頼性の簡易評価(根拠)
         """
     )
-}
 
+    static let concise = PromptTemplate(
+        system: "あなたは正確で中立な記事要約の編集者です。数値・固有名詞は原文を尊重し、事実と推測を区別してください。出力は日本語です。",
+        userBase: """
+        対象URL: {url}
+        本文:
+        {content}
+
+        出力:
+        1) 1-2行サマリ
+        2) 重要ポイント(最大3)
+        """
+    )
+}
