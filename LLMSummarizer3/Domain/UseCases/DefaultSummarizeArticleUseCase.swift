@@ -14,11 +14,17 @@ final class DefaultSummarizeArticleUseCase: SummarizeArticleUseCase {
     }
 
     func execute(url: URL, template: PromptTemplate) async throws -> SummaryItem {
+        try await execute(url: url, template: template, progress: nil)
+    }
+
+    func execute(url: URL, template: PromptTemplate, progress: SummarizeProgressHandler?) async throws -> SummaryItem {
         guard url.scheme?.hasPrefix("http") == true else { throw AppError.invalidURL }
 
+        progress?(SummarizeProgress(stage: .fetching, timestamp: Date()))
         Telemetry.shared.logEvent(.fetchStarted, props: [.urlDomain: url.host ?? ""])
         let html = try await fetcher.fetch(url: url)
 
+        progress?(SummarizeProgress(stage: .parsing, timestamp: Date()))
         Telemetry.shared.logEvent(.parseStarted, props: [.urlDomain: url.host ?? "", .chars: String(html.count)])
         let article = try parser.extract(html: html, baseURL: url)
         Telemetry.shared.logEvent(.parseFinished, props: [.urlDomain: url.host ?? ""])
@@ -32,10 +38,13 @@ final class DefaultSummarizeArticleUseCase: SummarizeArticleUseCase {
             stream: false
         )
 
+        progress?(SummarizeProgress(stage: .summarizing, timestamp: Date()))
         Telemetry.shared.logEvent(.summarizeStarted, props: [.urlDomain: url.host ?? "", .modelId: llm.id])
         let out = try await llm.summarize(input: input)
         Telemetry.shared.logEvent(.summarizeFinished, props: [.urlDomain: url.host ?? "", .modelId: llm.id])
 
-        return try await repo.save(url: url, title: article.title, summary: out.text, modelId: llm.id, promptId: nil, isUnread: false)
+        let item = try await repo.save(url: url, title: article.title, summary: out.text, modelId: llm.id, promptId: nil, isUnread: false)
+        progress?(SummarizeProgress(stage: .completed, timestamp: Date()))
+        return item
     }
 }

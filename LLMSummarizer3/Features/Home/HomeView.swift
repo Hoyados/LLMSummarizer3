@@ -1,3 +1,4 @@
+import Foundation
 import SwiftUI
 import SwiftData
 import UIKit
@@ -8,14 +9,36 @@ struct HomeView: View {
     @Environment(\.modelContext) private var context
     @EnvironmentObject private var env: AppEnvironment
     @EnvironmentObject private var settings: SettingsStore
+    @Environment(\.scenePhase) private var scenePhase
 
     @State private var urlInputs: [String] = Array(repeating: "", count: Self.maxInputs)
     @State private var status: String = ""
     @State private var showSettingsAlert = false
+    @State private var clipboardSuggestion: String?
+    @State private var stageDurations: [SummarizeStage: TimeInterval] = [:]
+    @State private var activeStage: SummarizeStage?
+    @State private var stageStart: Date?
+    @State private var activeURL: String?
 
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 16) {
+                if let clipboardSuggestion {
+                    Button {
+                        urlInputs[0] = clipboardSuggestion
+                        self.clipboardSuggestion = nil
+                    } label: {
+                        HStack(spacing: 8) {
+                            Image(systemName: "doc.on.clipboard")
+                            Text("Paste \(clipboardSuggestion)")
+                                .lineLimit(1)
+                        }
+                        .padding(.vertical, 6)
+                        .padding(.horizontal, 10)
+                        .background(.ultraThinMaterial, in: Capsule())
+                    }
+                }
+
                 ForEach(urlInputs.indices, id: \.self) { idx in
                     URLInputRow(
                         text: $urlInputs[idx],
@@ -34,6 +57,11 @@ struct HomeView: View {
                 }
 
                 if !status.isEmpty { Text(status).foregroundStyle(.secondary) }
+                if let progressText {
+                    Text(progressText)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
 
                 Spacer()
             }
@@ -44,6 +72,10 @@ struct HomeView: View {
             } message: {
                 Text("Gemini APIキーを設定してください。")
             }
+        }
+        .onAppear { refreshClipboardSuggestion() }
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .active { refreshClipboardSuggestion() }
         }
     }
 
@@ -80,8 +112,16 @@ struct HomeView: View {
                         ng += 1
                         continue
                     }
+                    await MainActor.run {
+                        resetProgress(for: s)
+                    }
                     do {
-                        let item = try await useCase.execute(url: url, template: template)
+                        let handler: SummarizeProgressHandler = { progress in
+                            Task { @MainActor in
+                                recordProgress(progress)
+                            }
+                        }
+                        let item = try await useCase.execute(url: url, template: template, progress: handler)
                         item.isUnread = true
                         try? context.save()
                         ok += 1
@@ -102,7 +142,71 @@ struct HomeView: View {
     }
 
     private func pasteFromClipboard(into index: Int) {
-        if let s = UIPasteboard.general.string { urlInputs[index] = s }
+        if let s = UIPasteboard.general.string {
+            urlInputs[index] = s
+            clipboardSuggestion = nil
+        }
+    }
+
+    private func refreshClipboardSuggestion() {
+        guard let s = UIPasteboard.general.string, validURL(from: s) != nil else {
+            clipboardSuggestion = nil
+            return
+        }
+        let trimmed = s.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else {
+            clipboardSuggestion = nil
+            return
+        }
+        if urlInputs.contains(trimmed) {
+            clipboardSuggestion = nil
+        } else {
+            clipboardSuggestion = trimmed
+        }
+    }
+
+    private func resetProgress(for url: String) {
+        stageDurations = [:]
+        activeStage = nil
+        stageStart = nil
+        activeURL = url
+    }
+
+    private func recordProgress(_ progress: SummarizeProgress) {
+        if let activeStage, let stageStart {
+            stageDurations[activeStage] = progress.timestamp.timeIntervalSince(stageStart)
+        }
+        activeStage = progress.stage
+        stageStart = progress.timestamp
+        if progress.stage == .completed {
+            activeURL = nil
+        }
+    }
+
+    private var progressText: String? {
+        guard !stageDurations.isEmpty || activeStage != nil else { return nil }
+        var parts: [String] = []
+        if let fetch = stageDurations[.fetching] {
+            parts.append("Fetch \(format(fetch))")
+        }
+        if let parse = stageDurations[.parsing] {
+            parts.append("Parse \(format(parse))")
+        }
+        if let summarize = stageDurations[.summarizing] {
+            parts.append("Summarize \(format(summarize))")
+        }
+        if let activeStage, activeStage != .completed, let stageStart {
+            let running = Date().timeIntervalSince(stageStart)
+            parts.append("\(activeStage.rawValue.capitalized) \(format(running))")
+        }
+        if let activeURL, let host = URL(string: activeURL)?.host {
+            parts.append("URL \(host)")
+        }
+        return parts.joined(separator: " • ")
+    }
+
+    private func format(_ duration: TimeInterval) -> String {
+        String(format: "%.1fs", duration)
     }
 
     private static func urlFieldIdentifier(for index: Int) -> String {

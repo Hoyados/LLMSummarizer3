@@ -6,6 +6,26 @@ enum ProviderKind: String, CaseIterable, Identifiable {
     var displayName: String { "Gemini" }
 }
 
+enum PromptPreset: String, CaseIterable, Identifiable {
+    case detailed
+    case concise
+
+    var id: String { rawValue }
+    var displayName: String {
+        switch self {
+        case .detailed: return "Detailed"
+        case .concise: return "Short"
+        }
+    }
+
+    var template: PromptTemplate {
+        switch self {
+        case .detailed: return .default
+        case .concise: return .concise
+        }
+    }
+}
+
 @MainActor
 final class SettingsStore: ObservableObject {
     static let shared = SettingsStore()
@@ -22,6 +42,9 @@ final class SettingsStore: ObservableObject {
     @Published var customPrompt: String {
         didSet { UserDefaults.standard.set(customPrompt, forKey: Keys.customPrompt) }
     }
+    @Published var promptPreset: PromptPreset {
+        didSet { UserDefaults.standard.set(promptPreset.rawValue, forKey: Keys.promptPreset) }
+    }
     @Published var apiKeyMasked: String = "" // for UI display only
 
     private init() {
@@ -34,6 +57,12 @@ final class SettingsStore: ObservableObject {
         } else {
             customPrompt = PromptTemplate.default.userBase
             UserDefaults.standard.set(customPrompt, forKey: Keys.customPrompt)
+        }
+        if let storedPreset = UserDefaults.standard.string(forKey: Keys.promptPreset),
+           let preset = PromptPreset(rawValue: storedPreset) {
+            promptPreset = preset
+        } else {
+            promptPreset = .detailed
         }
         Task { await refreshMask() }
     }
@@ -61,9 +90,9 @@ final class SettingsStore: ObservableObject {
     func promptTemplate() -> PromptTemplate {
         let trimmed = customPrompt.trimmingCharacters(in: .whitespacesAndNewlines)
         if trimmed.isEmpty {
-            return .default
+            return promptPreset.template
         }
-        return PromptTemplate(system: PromptTemplate.default.system, userBase: trimmed)
+        return PromptTemplate(system: promptPreset.template.system, userBase: trimmed)
     }
 }
 
@@ -71,6 +100,7 @@ enum Keys {
     static let provider = "settings.provider"
     static let model = "settings.model"
     static let customPrompt = "settings.customPrompt"
+    static let promptPreset = "settings.promptPreset"
     static let kcService = "URLSummaryAPI"
     static func account(for provider: ProviderKind) -> String { "Gemini" }
 }
